@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --mode: 'px';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    padding-top: 30px;
+    width: 100%;
+    height: 130px;
+    background-color: azure;
+    text-align: center;
+    z-index: 100;
+}
+
+section {
+    position: relative;
+    height: 470px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 1px dotted #ddd;
+}
+
+.box {
+    width: 230px;
+    height: 190px;
+    background-color: aliceblue;
+    border: 1px solid #0075FF;
+}
+
+.sliders__top--left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.sliders__top--right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.sliders__botom--left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.sliders__bottom--right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.sliders label {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    opacity: 0.5;
+}
+.sliders span {
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    opacity: 0.5;
+}
+.sliders span::after {
+    content: var(--mode);
+    padding-left: 15px;
+    font-size: 1rem;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    padding: 15px;
+    border: 1px dotted #ddd;
+}
+
+.copy {
+    margin-left: 25px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10%;
+    border: 1px solid aliceblue;
+}
+.copy:hover {
+    cursor: pointer;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+.copy:active {
+    transform: scale(0.95);
+}
+
+/* Default */
+.none {
+    display: none;
+}
+
+/* Inputs style */
+
+input[type=number] {
+    width: 70px;
+    height: 50px;
+    padding: 0 5px;
+    border: 1px dotted #ddd;
+    border-radius: 15%;
+    font-size: 1.2rem;
+    text-align: center;
+}
+input[type=range] {
+    width: 180px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App: CSS generator - create your border-radius easily!</title>
+    <link rel="stylesheet" href="./app-css-generator-border-radius.css">
+    <link rel="stylesheet" href="./app-css-generator-border-radius-toggle.css">
+</head>
+
+<body>
+    <header>
+        <h1>CSS generator: create your border-radius easily!</h1>
+
+        <div class="toggle">
+            <input id="pixel" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+            <label for="pixel" class="btn">PX</label>
+            <input id="percentrage" class="toggle toggle-right" name="toggle" value="true" type="radio">
+            <label for="percentrage" class="btn">%</label>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="sliders">
+            <div class="sliders__top--left">
+                <label>border-top-left-radius</label>
+                <input type="range" data-range="border-radius-top-left" min="0" max="100" value="0">
+                <input type="number" data-number="border-radius-top-left" min="0" max="100" value="0">
+                <span data-res="border-radius-top-left">0</span>
+            </div>
+            <div class="sliders__top--right">
+                <label>border-top-right-radius</label>
+                <input type="number" data-number="border-radius-top-right" min="0" max="100" value="0">
+                <input type="range" data-range="border-radius-top-right" min="0" max="100" value="0">
+                <span data-res="border-radius-top-right">0</span>
+            </div>
+            <div class="sliders__botom--left">
+                <span data-res="border-radius-bottom-left">0</span>
+                <input type="range" data-range="border-radius-bottom-left" min="0" max="100" value="0">
+                <input type="number" data-number="border-radius-bottom-left" min="0" max="100" value="0">
+                <label>border-bottom-left-radius</label>
+            </div>
+            <div class="sliders__bottom--right">
+                <span data-res="border-radius-bottom-right">0</span>
+                <input type="number" data-number="border-radius-bottom-right" min="0" max="100" value="0">
+                <input type="range" data-range="border-radius-bottom-right" min="0" max="100" value="0">
+                <label>border-bottom-right-radius</label>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="box"></div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="result">
+            <span data-result>border-radius: 0;</span>
+        </div>
+        <button class="copy none" data-btn="copy">Copy CSS</button>
+    </footer>
+
+
+    <script src="./app-css-generator-border-radius.js"></script>
+</body>
+
+</html>
