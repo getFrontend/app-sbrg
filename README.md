@@ -4,7 +4,7 @@
   src="app-sbrg-screenshot.png"
   alt="border-radius generator"
   title="Simple border-radius generator"
-  style="display: inline-block; margin: 0 auto; max-width: 1124px;">
+  style="display: inline-block; margin: 0 auto; max-width: 1110px;">
 
 Simple CSS border-radius generator (SBRG v1.0). 
 
