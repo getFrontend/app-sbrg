@@ -11,11 +11,12 @@
 }
 
 body {
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -24,20 +25,35 @@ h1 {
     margin-bottom: 15px;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    padding-top: 30px;
+.header {
+    position: relative;
+    padding-block: 15px;
+    margin-bottom: 30px;
     width: 100%;
-    height: 130px;
-    background-color: azure;
+    height: auto;
     text-align: center;
-    z-index: 100;
 }
 
-section {
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -20;
+    width: 100%;
+    height: 100%;
+    background-color: azure;
+
+}
+
+.toogle {
+    /* position: relative; */
+}
+
+.main {
+    flex-grow: 1;
     position: relative;
-    height: 470px;
+    min-height: 470px;
     width: 600px;
     display: flex;
     justify-content: center;
@@ -55,22 +71,22 @@ section {
     border: 1px solid #0075FF;
 }
 
-.sliders__top--left {
+.sliders__top_left {
     position: absolute;
     top: 0;
     left: 0;
 }
-.sliders__top--right {
+.sliders__top_right {
     position: absolute;
     top: 0;
     right: 0;
 }
-.sliders__botom--left {
+.sliders__botom_left {
     position: absolute;
     bottom: 0;
     left: 0;
 }
-.sliders__bottom--right {
+.sliders__bottom_right {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -88,20 +104,19 @@ section {
     opacity: 0.5;
 }
 .sliders span::after {
-    content: var(--mode);
     padding-left: 15px;
+    content: var(--mode);
     font-size: 1rem;
 }
 
-footer {
+.footer {
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    padding: 15px 0;
+    padding-block: 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 25px;
 }
 
 .result {
@@ -110,7 +125,6 @@ footer {
 }
 
 .copy {
-    margin-left: 25px;
     width: 100px;
     padding: 10px;
     border-radius: 10%;
